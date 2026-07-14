@@ -85,7 +85,7 @@ export default function ChatInterface() {
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-8 py-6 space-y-6">
         {messages.length === 0 && (
           <div className="opacity-50 text-sm py-10 text-center">
-            Ask about methodology, results, limitations — or say "compare X and Y" to get a table.
+            Ask about methodology, results, limitations — or say &quot;compare X and Y&quot; to get a table.
           </div>
         )}
         {messages.map((m, i) => (
