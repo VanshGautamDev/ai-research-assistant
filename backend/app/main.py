@@ -24,6 +24,11 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,
+    # Vercel gives every deployment its own unique subdomain (previews,
+    # branch deploys, etc.), not just the main project URL — this regex
+    # allows any *.vercel.app origin so CORS doesn't break on those without
+    # having to list every deployment URL individually.
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
