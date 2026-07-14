@@ -56,7 +56,8 @@ export default function ComparisonScreen() {
         <h1 className="font-display text-3xl">Compare Papers</h1>
       </div>
       <p className="opacity-60 mb-8 text-sm">
-        Select two or more papers to generate a side-by-side comparison table, grounded in each paper&apos;s own text
+        Select two or more papers to generate a side-by-side comparison table, grounded in each paper&apos;s own text.
+      </p>
 
       {papers.length < 2 ? (
         <p className="text-sm opacity-60">You need at least 2 ready papers in your library to compare.</p>
